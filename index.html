@@ -116,6 +116,9 @@
     <div class="label label--high" data-label-high></div>
   </div>
 
+  <button class="getValue">getValue</button>
+  <button class="setTrack">setTrack</button>
+
   <div style="height: 100px;"></div>
 
   <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
@@ -144,6 +147,22 @@
         if (e._args.value === '-13,2') {
          window.ahm.range.testing2.off('dragmove');
         }
+      });
+
+      $('.getValue').on('click', function() {
+        var value = window.ahm.range.testing2.getValue();
+        alert(value);
+      });
+
+       $('.setTrack').on('click', function() {
+         // 可选项，如不设置默认为DOM结构上设置的`data`属性值
+         var option = {
+           min: 5,
+           max: 50,
+           step: 3,
+           value: '12, 30'           
+         }
+        window.ahm.range.testing2.setTrack(option);
       });
 
     });
