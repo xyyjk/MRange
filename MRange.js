@@ -1,5 +1,5 @@
-/*
- * MRange <https://github.com/xyyjk/MRange>
+/*!
+ * MRange v1.0.1 | https://github.com/xyyjk/MRange
  * @author xyyjk
  * @license MIT
  */
@@ -32,10 +32,10 @@ $(function() {
 
     this.isSingle = typeof (this.option.value) === 'number' ? true : this.option.value.indexOf(',') === -1;
 
-    var min = this.option.min;
-    var max = this.option.max;
-    var step = this.option.step;
-    var value = this.isSingle ? this.option.value : this.option.value.split(',');
+    var min = parseFloat(this.option.min);
+    var max = parseFloat(this.option.max);
+    var step = parseFloat(this.option.step);
+    var value = this.isSingle ? parseFloat(this.option.value) : this.option.value.split(',');
 
     if (step > Math.abs(max - min) || min > max) {
       return;
@@ -144,7 +144,7 @@ $(function() {
     this.init();
   };
 
-  MRange.version = '1.0.0';
+  MRange.version = '1.0.1';
 
   function _onDragStart(evt) {
     var rangeVal = this.isSingle ? this.$label.html() : this.$labelLow.html() + ',' + this.$labelHigh.html();

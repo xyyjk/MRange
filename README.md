@@ -95,7 +95,7 @@ window.ahm.range.testing2.on('dragmove', function(e) {
 
 ## 方法
 
-- setTrack(option): `{min,max,step,value}` - 设置轨道位置
+- setTrack(option): `{min, max, step, value}` - 设置轨道位置
 - getValue(): - 获取当前值
 - destroy(): - 移除滑动选值
 - reset(): - 重新初始化
@@ -105,6 +105,9 @@ window.ahm.range.testing2.on('dragmove', function(e) {
 - `dragstart` - window.ahm.range[name].on('dragstart', function(e) { ... }
 - `dragmove` - window.ahm.range[name].on('dragmove', function(e) { ... }
 - `dragend` - window.ahm.range[name].on('dragend', function(e) { ... }
+
+## 更新日志
+要查看最近更新的明细，请参见 [Releases section](https://github.com/xyyjk/MRange/releases)。
 
 ## 许可
 
